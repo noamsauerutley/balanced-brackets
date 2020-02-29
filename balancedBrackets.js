@@ -1,7 +1,7 @@
 
 function isBalanced(input){
 
-let parentheses = "[]{}()"
+let parentheses = "[]{}()<>"
 let stack = []
 
 for(let parenthesis of input) {
