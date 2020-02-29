@@ -7,10 +7,14 @@ let isBalanced = (input) => {
   for(let bracket of input) {
     let bracketsIndex = brackets.indexOf(bracket)
 
+    if (bracketsIndex === -1){
+      continue
+    }
+
     if(bracketsIndex % 2 === 0) {
       stack.push(bracketsIndex + 1)
     } else {
-      if(stack.pop() !== bracketsIndex) {
+      if(stack.length === 0 || stack.pop() !== bracketsIndex) {
         return false;
       }
     }

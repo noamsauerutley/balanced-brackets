@@ -18,6 +18,10 @@ describe("isBalanced", () => {
     expect(isBalanced('([])[{}]{(())}')).toEqual(true)
   })
 
+  test("it returns true for strings containing balanced brackets and non-bracket characters", () => {
+    expect(isBalanced('([a]b)')).toEqual(true)
+  })
+
   test("it returns false for simple unbalanced brackets", () => {
     expect(isBalanced('(')).toEqual(false)
   })
