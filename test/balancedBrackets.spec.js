@@ -38,6 +38,10 @@ describe("isBalanced", () => {
     expect(isBalanced('([])[{}]{([)]}')).toEqual(false)
   })
 
+  test("it returns false for extra closing brackets", () => {
+    expect(isBalanced('()]')).toEqual(false)
+  })
+
 
 })
 
