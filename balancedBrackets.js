@@ -10,7 +10,7 @@ let isBalanced = (input) => {
     if(bracketsIndex % 2 === 0) {
       stack.push(bracketsIndex + 1)
     } else {
-      if(stack.length === 0 || stack.pop() !== bracketsIndex) {
+      if(stack.pop() !== bracketsIndex) {
         return false;
       }
     }
